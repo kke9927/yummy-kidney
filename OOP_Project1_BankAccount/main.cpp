@@ -7,32 +7,29 @@ int main() {
 
 	int num = 0;
 
-	while ( num !=5) {
-    cout << "----Menu-----" <<endl;
-    cout << "1. " << "Make Account" <<endl;
-    cout << "2. " << "Deposit" <<endl;
-    cout << "3. " << "Withdraw" <<endl;
-    cout << "4. " << "Information of account" <<endl;
-    cout << "5. " << "Exit" <<endl;
-    cout << "Select: ";
-    cin >> num;
+	while (1)
+	{
+		showMenu();
+		cout << "Selection : ";
+		cin >> num;
+		cout << endl;
 
 	switch (num) 
 	{
-	case 1:
+	case MAKE:
 		makeaccount();
 		break;
-	case 2:
+	case DEPOSIT:
 		deposit();
 		break;
-	case 3:
+	case WITHDRAW:
 		withdraw();
 		break;
-	case 4:
+	case INQUIRE:
 		display();
 		break;
-	case 5:
-		break;
+	case EXIT:
+		return 0;
 	}
 	}
 return 0;
